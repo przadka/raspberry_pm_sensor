@@ -1,0 +1,15 @@
+2017-02-19 07:55:36,344 - root - sds011.py:128 - INFO - Communication to device at /dev/ttyUSB0 initiated.
+2017-02-19 07:55:38,360 - root - sds011.py:144 - WARNING - Constructing the instance of a yet not responding sensor. Who set it sleeping, in passive mode or a duty cycle? I'm going to wake it up!'
+2017-02-19 07:55:38,908 - root - sds011.py:294 - INFO - Timeout calculated for 2 is 122.4
+2017-02-19 07:55:39,081 - root - sds011.py:153 - INFO - Sensor has firmware 161121
+2017-02-19 07:55:39,085 - root - sds011.py:154 - INFO - Sensor is in reportmode ReportModes.Initiative
+2017-02-19 07:55:39,092 - root - sds011.py:155 - INFO - Sensor is in workstate WorkStates.Measuring
+2017-02-19 07:55:39,107 - root - sds011.py:157 - INFO - Sensor is in dutycycle 2, None if Zero
+2017-02-19 07:55:39,113 - root - sds011.py:158 - INFO - Sensor has Device ID: E27F
+2017-02-19 07:55:39,180 - root - sds011.py:294 - INFO - Timeout calculated for 1 is 61.2
+2017-02-19 07:55:39,184 - root - sds011.py:223 - INFO - dutycycle setted: 1
+2017-02-19 07:55:39,280 - root - sds011.py:294 - INFO - Timeout calculated for 1 is 61.2
+2017-02-19 07:55:39,583 - root - sds011.py:198 - INFO - workstate setted: WorkStates.Measuring
+2017-02-19 07:56:39,645 - root - sds011.py:299 - INFO - get_values entered
+2017-02-19 07:56:44,705 - root - sds011.py:198 - INFO - workstate setted: WorkStates.Sleeping
+2017-02-19 09:08:28,254 - root - sds011.py:128 - INFO - Communication to device at /dev/ttyUSB0 initiated.
