@@ -14,4 +14,9 @@ Have a look at Win or Linux documentation.
 '''
 # Create an instance of your sensor
 sensor = SDS011('/dev/ttyUSB0')
+sensor.dutycycle = 0
+sensor.workstate = SDS011.WorkStates.Measuring
+time.sleep(3)
+values = sensor.get_values()
+time.sleep(3)
 sensor.workstate = SDS011.WorkStates.Sleeping
