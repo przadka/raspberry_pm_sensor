@@ -22,17 +22,28 @@ Have a look at Win or Linux documentation.
 '''
 # Create an instance of your sensor
 sensor = SDS011('/dev/ttyUSB0')
-
-
-sensor.dutycycle = 1 #TODO what values is reasonable here?
-
+sensor.dutycycle = 0 #TODO what values is reasonable here?
 sensor.workstate = SDS011.WorkStates.Measuring
 # Wait 60 seconds to get right values. Sensor has to warm up! #TODO is this really the case?
 time.sleep(60)
 
-values = sensor.get_values()
-if values is not None:
-	print(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()),",", values[0], ",", values[1])
-	time.sleep(5)
+pm25 = []
+pm10 = []
 
+for a in range(60):
+	while True:
+		values = sensor.get_values()
+		if values is not None:
+			pm25.append(values[1])
+			pm10.append(values[0])
+			break
+
+pm25_avg = sum(pm25) / len(pm25)
+pm10_avg = sum(pm10) / len(pm10)
+
+if values is not None:
+	print(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()),",", "{0:.1f}".format(pm10_avg), ",", "{0:.1f}".format(pm25_avg))
+
+time.sleep(10)
 sensor.workstate = SDS011.WorkStates.Sleeping
+time.sleep(10)
