@@ -7,12 +7,10 @@
 # the laser life.
 
 MY_PATH="`dirname \"$0\"`"
-
-python3 $MY_PATH/put_to_sleep.py
+timeout 15s python3 $MY_PATH/put_to_sleep.py
 sleep 5
-python3 $MY_PATH/put_to_sleep.py
+timeout 15s python3 $MY_PATH/put_to_sleep.py
 sleep 5
-python3 $MY_PATH/put_to_sleep.py
+timeout 15s python3 $MY_PATH/put_to_sleep.py
 sleep 5
-python3 $MY_PATH/put_to_sleep.py
-
+timeout 15s python3 $MY_PATH/put_to_sleep.py
