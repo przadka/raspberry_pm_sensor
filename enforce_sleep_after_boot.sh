@@ -7,6 +7,11 @@
 # the laser life.
 
 MY_PATH="`dirname \"$0\"`"
+
+echo $(date) "Sensor reconnected. Trying to put it to sleep..." >> $MY_PATH/reconnect.log
+
+sleep 10 #wait to make sure devices is initialized
+
 timeout 15s python3 $MY_PATH/put_to_sleep.py
 sleep 5
 timeout 15s python3 $MY_PATH/put_to_sleep.py
@@ -14,3 +19,5 @@ sleep 5
 timeout 15s python3 $MY_PATH/put_to_sleep.py
 sleep 5
 timeout 15s python3 $MY_PATH/put_to_sleep.py
+
+echo $(date) "Reconnecting finished." >> $MY_PATH/reconnect.log

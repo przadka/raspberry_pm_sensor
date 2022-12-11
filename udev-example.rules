@@ -1,0 +1,2 @@
+ACTION=="bind", KERNEL=="ttyUSB0", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", RUN+="/home/michal/pm_sensor/enforce_sleep_after_boot.sh"
+
